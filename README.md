@@ -69,3 +69,31 @@ Este proyecto está **diseñado únicamente para fines educativos y de prueba lo
   - `tkinter` (incluido por defecto en la mayoría de las instalaciones de Python)
   - `matplotlib`
   - `psutil`
+
+## ⚖️ ❗ Consideraciones Legales y Éticas
+
+- **Lanzar múltiples solicitudes simultáneas a un servidor sin permiso** puede ser considerado un **ataque DDoS real**, lo cual es **ilegal en casi todos los países**, incluso si el daño es mínimo o no intencional.
+- Aunque tú seas el dueño del servidor, si está en la nube (por ejemplo, AWS, Azure, etc.), podría violar los **términos de servicio** y provocar sanciones, bloqueos o costos inesperados.
+- Hacer esto sin autorización puede **comprometer tu conexión**, **afectar a otros usuarios** y **generar repercusiones legales** graves.
+
+---
+
+## 🧪 ¿En qué casos sería aceptable?
+
+- Si el servidor **es completamente tuyo**, está **en red local o virtual**, y su objetivo es **pruebas de estrés controladas**.
+- Usando herramientas de protección para asegurar que el "ataque" no afecte a terceros (limitando ancho de banda, número de hilos, duración, etc.).
+- Siempre dejando en claro que se trata de una **prueba de carga con propósito educativo, de benchmarking o de hardening**.
+
+---
+
+## ⚙️ ¿Cómo cambiarlo para usar un servidor real?
+
+Si estás autorizado, puedes cambiar esta linea en `interfaz.py`:
+```
+url = "http://127.0.0.1:8000/lento"
+```
+por una URL real:
+```
+url = "https://mi-servidor-real.com/api/prueba"
+```
+Y asegurar que el servidor este diseñado para manejar esta carga. Pero **nunca lo hagas sin autorizacion clara y escrita, creo que no es necesario recalcar que hacer lo contrario seria ilegal**.
